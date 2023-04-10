@@ -1,0 +1,15 @@
+2) SELECT category, COUNT(Product) FROM product GROUP BY category;
+3) SELECT DISTINCT brand, COUNT(category) FROM product GROUP BY brand;
+4) SELECT customer.name, COUNT(*) as purchases_count
+FROM customer
+JOIN product ON customer.productID = product.id
+GROUP BY customer.name;
+5) SELECT customer.name, COUNT(*) as Quantity
+FROM customer
+JOIN product ON customer.productID = product.id
+GROUP BY customer.name
+ORDER BY Quantity DESC;
+6) SELECT p.category, p.Product, p.price
+FROM product p
+JOIN customer c ON p.id = c.productID
+ORDER BY p.category ASC, p.price DESC;
